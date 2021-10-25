@@ -1,0 +1,42 @@
+body {
+  background-color: gainsboro;
+}
+
+.search-form {
+  margin-top: 25px;
+  text-align: center;
+}
+.search-form_input {
+  width: 200px;
+  height: 30px;
+  padding-left: 12px;
+  padding-bottom: 2px;
+  border: transparent;
+  border-radius: 5px;
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    font-size: 18px;
+    color: darkslategray;
+  }
+}
+
+.gallery {
+  margin-top: 25px;
+}
+.button {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  margin-top: 50px;
+  cursor: pointer;
+  background-color: darkseagreen;
+  border: 2px solid gold;
+  border-radius: 5px;
+  color: black;
+  &_box {
+    text-align: center;
+  }
+}

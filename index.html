@@ -10,9 +10,22 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   </head>
   <body>
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <form class="search-form" id="search-form">
+      <input
+        type="text"
+        class="search-form_input"
+        name="query"
+        autocomplete="off"
+        placeholder="Search images..."
+      />
+    </form>
+    <ul class="gallery"></ul>
+    <div class="button_box">
+      <button class="button">Load more</button>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>
