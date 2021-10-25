@@ -9,11 +9,37 @@ console.dir(inputEl);
 console.log(galleryListEl);
 console.log(buttonEl);
 
+console.dir(apiService);
+let pageNumber = 0;
+let arrayPhotos = [];
+let searchValue = '';
+
 const findPhotoFn = e => {
   galleryListEl.innerHTML = '';
-  fetchPhoto(e.target.value, 1)
+
+  if (e.target.value.length != 0) {
+    searchValue = e.target.value;
+    pageNumber = 1;
+  } else {
+    pageNumber++;
+  }
+  console.log(e.target.value.length);
+  apiService(searchValue, pageNumber)
     .then(response => response.json())
-    .then(console.log);
+    .then(photos => {
+      arrayPhotos = [...arrayPhotos, photos.hits.map(photoCardTpl).join('')];
+
+      galleryListEl.innerHTML = arrayPhotos;
+
+      const element = document.getElementById(photos.hits[0].id);
+
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end',
+      });
+    });
 };
+
+buttonEl.addEventListener('click', findPhotoFn);
 
 inputEl.addEventListener('input', debounce(findPhotoFn, 500));
