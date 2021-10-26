@@ -41,7 +41,9 @@ body {
     text-align: center;
   }
 }
-
+.is_hidden {
+  display: none;
+}
 .photos_box {
   text-align: center;
 }
@@ -51,7 +53,7 @@ body {
 .img {
   margin-bottom: 10px;
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     cursor: pointer;
   }
 }

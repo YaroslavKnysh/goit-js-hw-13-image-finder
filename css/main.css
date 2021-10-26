@@ -42,7 +42,6 @@ body {
 
 .gallery {
   margin-top: 25px;
-  list-style: none;
 }
 
 .button {
@@ -62,6 +61,10 @@ body {
   text-align: center;
 }
 
+.is_hiden {
+  display: none;
+}
+
 .photos_box {
   text-align: center;
 }
@@ -75,8 +78,8 @@ body {
 }
 
 .img:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   cursor: pointer;
 }
 
