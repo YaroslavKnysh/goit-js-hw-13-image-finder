@@ -30,7 +30,8 @@ body {
   width: 100px;
   height: 30px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   cursor: pointer;
   background-color: darkseagreen;
   border: 2px solid gold;
@@ -39,4 +40,34 @@ body {
   &_box {
     text-align: center;
   }
+}
+
+.photos_box {
+  text-align: center;
+}
+.photo-card {
+  margin-bottom: 10px;
+}
+.img {
+  margin-bottom: 10px;
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}
+.stats {
+  display: flex;
+  justify-content: center;
+  &-item {
+    display: inline-flex;
+    margin-right: 15px;
+    align-items: center;
+  }
+  &-item-box {
+    display: flex;
+    align-items: center;
+  }
+}
+.material-icons {
+  margin-right: 8px;
 }

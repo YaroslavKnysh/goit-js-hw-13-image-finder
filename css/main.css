@@ -42,13 +42,15 @@ body {
 
 .gallery {
   margin-top: 25px;
+  list-style: none;
 }
 
 .button {
   width: 100px;
   height: 30px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   cursor: pointer;
   background-color: darkseagreen;
   border: 2px solid gold;
@@ -58,5 +60,55 @@ body {
 
 .button_box {
   text-align: center;
+}
+
+.photos_box {
+  text-align: center;
+}
+
+.photo-card {
+  margin-bottom: 10px;
+}
+
+.img {
+  margin-bottom: 10px;
+}
+
+.img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: pointer;
+}
+
+.stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.stats-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stats-item-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.material-icons {
+  margin-right: 8px;
 }
 /*# sourceMappingURL=main.css.map */

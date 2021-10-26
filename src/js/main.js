@@ -5,25 +5,25 @@ import debounce from 'lodash.debounce';
 const inputEl = document.querySelector('.search-form_input');
 const galleryListEl = document.querySelector('.gallery');
 const buttonEl = document.querySelector('.button');
-console.dir(inputEl);
-console.log(galleryListEl);
-console.log(buttonEl);
 
-console.dir(apiService);
 let pageNumber = 0;
 let arrayPhotos = [];
 let searchValue = '';
 
 const findPhotoFn = e => {
-  galleryListEl.innerHTML = '';
-
+  // localStorage.setItem('namePhoto', searchValue);
   if (e.target.value.length != 0) {
+    arrayPhotos = [];
     searchValue = e.target.value;
     pageNumber = 1;
-  } else {
+  }
+  // else if ((e.target.value = '')) {
+  //   pageNumber = 1;
+  // }
+  else {
     pageNumber++;
   }
-  console.log(e.target.value.length);
+
   apiService(searchValue, pageNumber)
     .then(response => response.json())
     .then(photos => {
@@ -31,15 +31,20 @@ const findPhotoFn = e => {
 
       galleryListEl.innerHTML = arrayPhotos;
 
-      const element = document.getElementById(photos.hits[0].id);
+      const firstPhotoId = document.getElementById(photos.hits[0].id);
 
-      element.scrollIntoView({
+      firstPhotoId.scrollIntoView({
         behavior: 'smooth',
         block: 'end',
       });
     });
 };
 
+inputEl.addEventListener('input', debounce(findPhotoFn, 500));
 buttonEl.addEventListener('click', findPhotoFn);
 
-inputEl.addEventListener('input', debounce(findPhotoFn, 500));
+// let localStorageSave = localStorage.getItem('namePhoto');
+// if (localStorageSave !== undefined) {
+//   findPhotoFn({ target: { value: localStorageSave } });
+//   inputEl.value = localStorageSave;
+// }

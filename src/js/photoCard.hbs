@@ -1,22 +1,26 @@
-<div class='photo-card' id={{id}}>
-  <img src={{webformatURL}} alt={{tags}} />
+<div class='photos_box'>
+  <div class='photo-card' id={{id}}>
+    <img class='img' src={{webformatURL}} alt={{tags}} />
 
-  <div class='stats'>
-    <p class='stats-item'>
-      <i class='material-icons'>thumb_up</i>
-      {{likes}}
-    </p>
-    <p class='stats-item'>
-      <i class='material-icons'>visibility</i>
-      {{views}}
-    </p>
-    <p class='stats-item'>
-      <i class='material-icons'>comment</i>
-      {{comments}}
-    </p>
-    <p class='stats-item'>
-      <i class='material-icons'>cloud_download</i>
-      {{downloads}}
-    </p>
+    <div class='stats'>
+      <div class='stats-item-box'>
+        <p class='stats-item'>
+          <i class='material-icons'>thumb_up</i>
+          {{likes}}
+        </p>
+      </div>
+      <p class='stats-item'>
+        <i class='material-icons'>visibility</i>
+        {{views}}
+      </p>
+      <p class='stats-item'>
+        <i class='material-icons'>comment</i>
+        {{comments}}
+      </p>
+      <p class='stats-item'>
+        <i class='material-icons'>cloud_download</i>
+        {{downloads}}
+      </p>
+    </div>
   </div>
 </div>
